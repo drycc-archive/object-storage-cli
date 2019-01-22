@@ -9,10 +9,10 @@ import (
 
 // S3 is the Config implementation for the S3 client
 type S3 struct {
-	AccessKeyFile string `envconfig:"ACCESS_KEY_FILE" default:"/var/run/secrets/deis/objectstore/creds/accesskey"`
-	SecretKeyFile string `envconfig:"SECRET_KEY_FILE" default:"/var/run/secrets/deis/objectstore/creds/secretkey"`
-	RegionFile    string `envconfig:"REGION_FILE" default:"/var/run/secrets/deis/objectstore/creds/region"`
-	BucketFile    string `envconfig:"BUCKET_FILE" default:"/var/run/secrets/deis/objectstore/creds/bucket"`
+	AccessKeyFile string `envconfig:"ACCESS_KEY_FILE" default:"/var/run/secrets/drycc/objectstore/creds/accesskey"`
+	SecretKeyFile string `envconfig:"SECRET_KEY_FILE" default:"/var/run/secrets/drycc/objectstore/creds/secretkey"`
+	RegionFile    string `envconfig:"REGION_FILE" default:"/var/run/secrets/drycc/objectstore/creds/region"`
+	BucketFile    string `envconfig:"BUCKET_FILE" default:"/var/run/secrets/drycc/objectstore/creds/bucket"`
 }
 
 // CreateDriver is the Config interface implementation

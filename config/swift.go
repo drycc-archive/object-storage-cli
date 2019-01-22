@@ -9,12 +9,12 @@ import (
 
 // Swift is the Config implementation for the Swift client
 type Swift struct {
-	UserName      string `envconfig:"USER_NAME_FILE" default:"/var/run/secrets/deis/objectstore/creds/username"`
-	Password      string `envconfig:"PASSWORD_FILE" default:"/var/run/secrets/deis/objectstore/creds/password"`
-	ContainerFile string `envconfig:"CONTAINER_FILE" default:"/var/run/secrets/deis/objectstore/creds/container"`
-	AuthURL       string `envconfig:"AUTHURL_FILE" default:"/var/run/secrets/deis/objectstore/creds/authurl"`
-	Tenant        string `envconfig:"TENANT_FILE" default:"/var/run/secrets/deis/objectstore/creds/tenant"`
-	AuthVersion   string `envconfig:"AUTH_VERSION_FILE" default:"/var/run/secrets/deis/objectstore/creds/authversion"`
+	UserName      string `envconfig:"USER_NAME_FILE" default:"/var/run/secrets/drycc/objectstore/creds/username"`
+	Password      string `envconfig:"PASSWORD_FILE" default:"/var/run/secrets/drycc/objectstore/creds/password"`
+	ContainerFile string `envconfig:"CONTAINER_FILE" default:"/var/run/secrets/drycc/objectstore/creds/container"`
+	AuthURL       string `envconfig:"AUTHURL_FILE" default:"/var/run/secrets/drycc/objectstore/creds/authurl"`
+	Tenant        string `envconfig:"TENANT_FILE" default:"/var/run/secrets/drycc/objectstore/creds/tenant"`
+	AuthVersion   string `envconfig:"AUTH_VERSION_FILE" default:"/var/run/secrets/drycc/objectstore/creds/authversion"`
 }
 
 // CreateDriver is the Config interface implementation

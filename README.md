@@ -1,7 +1,7 @@
 
-|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | Deis Workflow will soon no longer be maintained.<br />Please [read the announcement](https://deis.com/blog/2017/deis-workflow-final-release/) for more detail. |
+|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | Drycc Workflow will soon no longer be maintained.<br />Please [read the announcement](https://drycc.com/blog/2017/drycc-workflow-final-release/) for more detail. |
 |---:|---|
-| 09/07/2017 | Deis Workflow [v2.18][] final release before entering maintenance mode |
+| 09/07/2017 | Drycc Workflow [v2.18][] final release before entering maintenance mode |
 | 03/01/2018 | End of Workflow maintenance: critical patches no longer merged |
 
 # object-storage-cli
@@ -13,26 +13,26 @@ This CLI accepts a single flag called `--storage-type`. The value of that flag d
 
 If the storage type is `s3`, the CLI reads three files which specify access key, access secret and region. Each file location can be configured by an environment variable. Each environment variable and its default is listed below.
 
-- `ACCESS_KEY_FILE` (`/var/run/secrets/deis/objectstore/creds/accesskey`)
-- `SECRET_KEY_FILE` (`/var/run/secrets/deis/objectstore/creds/secretkey`)
-- `REGION_FILE` (`/var/run/secrets/deis/objectstore/creds/region`)
-- `BUCKET_FILE` (`/var/run/secrets/deis/objectstore/creds/bucket`)
+- `ACCESS_KEY_FILE` (`/var/run/secrets/drycc/objectstore/creds/accesskey`)
+- `SECRET_KEY_FILE` (`/var/run/secrets/drycc/objectstore/creds/secretkey`)
+- `REGION_FILE` (`/var/run/secrets/drycc/objectstore/creds/region`)
+- `BUCKET_FILE` (`/var/run/secrets/drycc/objectstore/creds/bucket`)
 
 ## `gcs`
 
 If the storage type is `gcs`, the CLI reads two files which specify the bucket and GCS access key. Each file location can be configured by an environment variable. Each environment variable and its default is listed below.
 
-- `KEY_FILE` (`/var/run/secrets/deis/objectstore/creds/key.json`)
+- `KEY_FILE` (`/var/run/secrets/drycc/objectstore/creds/key.json`)
 	- This file should be a JSON encoded object and contain a `project-id` key, which specifies the GCS project ID
-- `BUCKET_FILE` (`/var/run/secrets/deis/objectstore/creds/bucket`)
+- `BUCKET_FILE` (`/var/run/secrets/drycc/objectstore/creds/bucket`)
 
 ## `azure`
 
 If the storage type is `azure`, the CLI reads three files which specify the account name, account key and container. Each file location can be configured by an environment variable. Each environment variable and its default is listed below.
 
-- `ACCOUNT_NAME_FILE` (`/var/run/secrets/deis/objectstore/creds/accountname`)
-- `ACCOUNT_KEY_FILE` (`/var/run/secrets/deis/objectstore/creds/accountkey`)
-- `CONTAINER_FILE` (`/var/run/secrets/deis/objectstore/creds/container`)
+- `ACCOUNT_NAME_FILE` (`/var/run/secrets/drycc/objectstore/creds/accountname`)
+- `ACCOUNT_KEY_FILE` (`/var/run/secrets/drycc/objectstore/creds/accountkey`)
+- `CONTAINER_FILE` (`/var/run/secrets/drycc/objectstore/creds/container`)
 
 ## `minio`
 
@@ -42,18 +42,18 @@ In this case, the CLI requires information on where the Minio server is located,
 
 It gets the location information from environment variables, and assumes that any value that starts with `$` is itself an environment variable. It also gets the auth information from three files whose locations are specified by environment variables as well. See below for the list of environment variables and their defaults.
 
-- `S3_HOST` (`$DEIS_MINIO_SERVICE_HOST`)
-- `S3_PORT` (`$DEIS_MINIO_SERVICE_PORT`)
+- `S3_HOST` (`$DRYCC_MINIO_SERVICE_HOST`)
+- `S3_PORT` (`$DRYCC_MINIO_SERVICE_PORT`)
 - `REGION` (`us-east-1`)
 - `SECURE` (`false`)
 - `V4_AUTH` (`true`)
-- `ACCESS_KEY_FILE` (`/var/run/secrets/deis/objectstore/creds/accesskey`)
-- `ACCESS_SECRET_FILE` (`/var/run/secrets/deis/objectstore/creds/secretkey`)
-- `BUCKET_FILE` (`/var/run/secrets/deis/objectstore/creds/bucket`)
+- `ACCESS_KEY_FILE` (`/var/run/secrets/drycc/objectstore/creds/accesskey`)
+- `ACCESS_SECRET_FILE` (`/var/run/secrets/drycc/objectstore/creds/secretkey`)
+- `BUCKET_FILE` (`/var/run/secrets/drycc/objectstore/creds/bucket`)
 
 # Downloads
 
-Every commit to the `master` branch gets tested and cross-compiled in [Travis CI](https://travis-ci.com/deis/object-storage-cli). The resulting binaries get uploaded to Google Cloud Storage. If you'd like to download the latest build, use the command in one of the sections below appropriate for your system.
+Every commit to the `master` branch gets tested and cross-compiled in [Travis CI](https://travis-ci.com/drycc/object-storage-cli). The resulting binaries get uploaded to Google Cloud Storage. If you'd like to download the latest build, use the command in one of the sections below appropriate for your system.
 
 ## 64 Bit Mac OS X
 
@@ -83,4 +83,4 @@ curl -o object-storage-cli https://storage.googleapis.com/object-storage-cli/obj
 ./object-storage-cli --version
 ```
 
-[v2.18]: https://github.com/deisthree/workflow/releases/tag/v2.18.0
+[v2.18]: https://github.com/drycc/workflow/releases/tag/v2.18.0

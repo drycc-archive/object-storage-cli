@@ -4,12 +4,12 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/deis/object-storage-cli/actions"
-	"github.com/deis/object-storage-cli/config"
+	"github.com/drycc/object-storage-cli/actions"
+	"github.com/drycc/object-storage-cli/config"
 )
 
 var (
-	debugStr = "DEIS_DEBUG"
+	debugStr = "DRYCC_DEBUG"
 )
 
 func main() {

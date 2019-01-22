@@ -22,11 +22,11 @@ var (
 
 // Minio is the Config implementation for the Minio client
 type Minio struct {
-	AccessKeyFile    string `envconfig:"ACCESS_KEY_FILE" default:"/var/run/secrets/deis/objectstore/creds/accesskey"`
-	AccessSecretFile string `envconfig:"ACCESS_SECRET_FILE" default:"/var/run/secrets/deis/objectstore/creds/secretkey"`
-	BucketFile       string `envconfig:"BUCKET_FILE" default:"/var/run/secrets/deis/objectstore/creds/bucket"`
-	S3Host           string `envconfig:"S3_HOST" default:"$DEIS_MINIO_SERVICE_HOST"`
-	S3Port           string `envconfig:"S3_PORT" default:"$DEIS_MINIO_SERVICE_PORT"`
+	AccessKeyFile    string `envconfig:"ACCESS_KEY_FILE" default:"/var/run/secrets/drycc/objectstore/creds/accesskey"`
+	AccessSecretFile string `envconfig:"ACCESS_SECRET_FILE" default:"/var/run/secrets/drycc/objectstore/creds/secretkey"`
+	BucketFile       string `envconfig:"BUCKET_FILE" default:"/var/run/secrets/drycc/objectstore/creds/bucket"`
+	S3Host           string `envconfig:"S3_HOST" default:"$DRYCC_MINIO_SERVICE_HOST"`
+	S3Port           string `envconfig:"S3_PORT" default:"$DRYCC_MINIO_SERVICE_PORT"`
 	Region           string `envconfig:"REGION" default:"us-east-1"`
 	Secure           bool   `envconfig:"SECURE" default:"false"`
 	V4Auth           bool   `envconfig:"V4_AUTH" default:"true"`

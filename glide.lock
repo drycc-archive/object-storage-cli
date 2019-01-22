@@ -37,7 +37,7 @@ imports:
   version: bc465becccd1d527002fda095fc3c19d9c115029
 - name: github.com/docker/distribution
   version: 0afef00d5764404d70f86076f364551657d51de6
-  repo: https://github.com/deisthree/distribution
+  repo: https://github.com/drycc/distribution
   vcs: git
   subpackages:
   - registry/storage/driver

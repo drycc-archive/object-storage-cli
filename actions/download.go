@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/deis/object-storage-cli/config"
+	"github.com/drycc/object-storage-cli/config"
 	"github.com/docker/distribution/context"
 )
 

@@ -9,9 +9,9 @@ import (
 
 // Azure is the Config implementation for the Azure client
 type Azure struct {
-	AccountNameFile string `envconfig:"ACCOUNT_NAME_FILE" default:"/var/run/secrets/deis/objectstore/creds/accountname"`
-	AccountKeyFile  string `envconfig:"ACCOUNT_KEY_FILE" default:"/var/run/secrets/deis/objectstore/creds/accountkey"`
-	ContainerFile   string `envconfig:"CONTAINER_FILE" default:"/var/run/secrets/deis/objectstore/creds/container"`
+	AccountNameFile string `envconfig:"ACCOUNT_NAME_FILE" default:"/var/run/secrets/drycc/objectstore/creds/accountname"`
+	AccountKeyFile  string `envconfig:"ACCOUNT_KEY_FILE" default:"/var/run/secrets/drycc/objectstore/creds/accountkey"`
+	ContainerFile   string `envconfig:"CONTAINER_FILE" default:"/var/run/secrets/drycc/objectstore/creds/container"`
 }
 
 // CreateDriver is the Config interface implementation
